@@ -25,7 +25,7 @@ Socket.io interface is provided at `/socket.io/`. The interface also can be expl
 
 The legacy API is provided as is and will not be further developed.
 
-The legacy API is currently (Blockbook v0.3.1) also accessible without the */v1/* prefix, however in the future versions the version less access will be removed.
+The legacy API is currently (Blockbook v0.3.3) also accessible without the */v1/* prefix, however in the future versions the version less access will be removed.
 
 ## API V2
 
@@ -67,7 +67,7 @@ Response:
   "blockbook": {
     "coin": "Bitcoin",
     "host": "blockbook",
-    "version": "0.3.1",
+    "version": "0.3.3",
     "gitCommit": "3d9ad91",
     "buildTime": "2019-05-17T14:34:00+00:00",
     "syncMode": true,
@@ -217,7 +217,8 @@ Response for Ethereum-type coins. There is always only one *vin*, only one *vout
     "nonce": 2830,
     "gasLimit": 36591,
     "gasUsed": 36591,
-    "gasPrice": "11000000000"
+    "gasPrice": "11000000000",
+    "data": "0xa9059cbb000000000000000000000000ba98d6a5"
   }
 }
 ```
@@ -290,7 +291,7 @@ Example response:
 Returns balances and transactions of an address. The returned transactions are sorted by block height, newest blocks first.
 
 ```
-GET /api/v2/address/<address>[?page=<page>&pageSize=<size>&from=<block height>&to=<block height>&details=<basic|tokens|tokenBalances|txids|txs>]
+GET /api/v2/address/<address>[?page=<page>&pageSize=<size>&from=<block height>&to=<block height>&details=<basic|tokens|tokenBalances|txids|txs>&contract=<contract address>]
 ```
 
 The optional query parameters:
@@ -302,7 +303,9 @@ The optional query parameters:
     - *tokens*: *basic* + tokens belonging to the address (applicable only to some coins)
     - *tokenBalances*: *basic* + tokens with balances + belonging to the address (applicable only to some coins)
     - *txids*: *tokenBalances* + list of txids, subject to  *from*, *to* filter and paging
+    - *txslight*:  *tokenBalances* + list of transaction with limited details (only data from index), subject to  *from*, *to* filter and paging
     - *txs*:  *tokenBalances* + list of transaction with details, subject to  *from*, *to* filter and paging
+- *contract*: return only transactions which affect specified contract (applicable only to coins which support contracts)
 
 Response:
 

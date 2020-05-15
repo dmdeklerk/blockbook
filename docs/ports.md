@@ -34,6 +34,7 @@
 | Ravencoin            | 9059                    | 9159                  | 8059             | 38359                       |
 | Ritocoin             | 9060                    | 9160                  | 8060             | 38360                       |
 | Decred               | 9061                    | 9161                  | 8061             | 38361                       |
+| SnowGem              | 9062                    | 9162                  | 8062             | 38362                       |
 | Flo                  | 9066                    | 9166                  | 8066             | 38366                       |
 | Polis                | 9067                    | 9167                  | 8067             | 38367                       |
 | Qtum                 | 9088                    | 9188                  | 8088             | 38388                       |
@@ -41,6 +42,8 @@
 | CPUchain             | 9090                    | 9190                  | 8090             | 38390                       |
 | DeepOnion            | 9091                    | 9191                  | 8091             | 38391                       |
 | Unobtanium           | 9092                    | 9192                  | 65535            | 38392                       |
+| Omotenashicoin       | 9094                    | 9194                  | 8094             | 38394                       |
+| BitZeny              | 9095                    | 9195                  | 8095             | 38395                       |
 | Bitcoin Testnet      | 19030                   | 19130                 | 18030            | 48330                       |
 | Bitcoin Cash Testnet | 19031                   | 19131                 | 18031            | 48331                       |
 | Zcash Testnet        | 19032                   | 19132                 | 18032            | 48332                       |
@@ -55,5 +58,6 @@
 | Decred Testnet       | 19061                   | 19161                 | 18061            | 48361                       |
 | Flo Testnet          | 19066                   | 19166                 | 18066            | 48366                       |
 | Qtum Testnet         | 19088                   | 19188                 | 18088            | 48388                       |
+| OmotenashicoinTestnet| 19089                   | 19189                 | 18089            | 48389                       |
 
 > NOTE: This document is generated from coin definitions in `configs/coins`.
